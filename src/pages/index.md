@@ -15,8 +15,8 @@ or a letter that the group found to little character sheets of your players to u
 ## Screenshots
 
 <center>
-    <img src="/img/screenshot.png" style={{maxWidth: "700px"}} />
-    <img src="/img/screenshot_gen.png" style={{maxWidth: "700px"}} />
+    <img src="/img/screenshot.png" style={{maxWidth: "700px", width: "100%"}} />
+    <img src="/img/screenshot_gen.png" style={{maxWidth: "700px", width: "100%"}} />
 </center>
 
 ---
