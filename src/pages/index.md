@@ -1,10 +1,18 @@
 <img src="/img/readme_header.png" />
 
-# Sales & Dungeons
+---
+
+[![Discord](https://img.shields.io/discord/678654745803751579?label=discord)](https://discord.gg/5MUZEjc) [![GitHub Discussions](https://img.shields.io/github/discussions/BigJk/snd)](https://github.com/BigJk/snd/discussions) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/BigJk/snd)](https://github.com/BigJk/snd/releases)
+
+**Sales & Dungeons** — Thermal Printer as D&amp;D Utility.
 
 With Sales & Dungeons you can create highly customizable handouts, quick reference and much more for your Dungeons and Dragons (or other PnP) Sessions.
 Most Thermal Printer are small in size and can be taken with you and kept right at the gaming table. Use-cases range from printing out magic items, spells
 or a letter that the group found to little character sheets of your players to use as DM note. The possibilities are nearly endless!
+
+---
+
+## Screenshots
 
 <center>
     <img src="/img/screenshot.png" style={{maxWidth: "700px"}} />
