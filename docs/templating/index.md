@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Templating
 
 A template defines the look of a print-out and contains entries that can be printed.

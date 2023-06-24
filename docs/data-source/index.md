@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Data Sources
 
 Data Sources are collections of data that can be linked to Templates and Generators. For example a Data Source could contain monsters from Dungeons & Dragons 5e, so that the monsters can be used in a Template.
