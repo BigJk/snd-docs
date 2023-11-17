@@ -17,6 +17,7 @@ or a letter that the group found to little character sheets of your players to u
 <center>
     <img src="/img/screenshot.png" style={{maxWidth: "700px", width: "100%"}} />
     <img src="/img/screenshot_gen.png" style={{maxWidth: "700px", width: "100%"}} />
+    <img src="/img/screenshot_ai.png" style={{maxWidth: "700px", width: "100%"}} />
 </center>
 
 ---
@@ -24,26 +25,31 @@ or a letter that the group found to little character sheets of your players to u
 ## Features
 
 - Works on
-    - Windows
-    - Mac (Intel, M1)
-    - Linux (x64, ARM64)
-    - Raspberry Pi (ARMv6, ARMv7)
-    - Anything else go can be compiled on
+  - Windows
+  - Mac (Intel, M1)
+  - Linux (x64, ARM64)
+  - Raspberry Pi (ARMv6, ARMv7)
+  - Anything else go can be compiled on
 - Extensive templating system through [Nunjucks](https://mozilla.github.io/nunjucks/)
 - Extensive random generator system
 - Various connection methods
-    - Windows Direct Printing
-    - Raw USB Printing
-    - CUPS (Linux, Mac)
-    - Serial
+  - Windows Direct Printing
+  - Raw USB Printing
+  - CUPS (Linux, Mac)
+  - Serial
 - Import & Export templates and data sources
-- Fast access to external [data sources](https://github.com/BigJk/snd/wiki/Data-Sources) like Open5e (instant access to SRD monsters, spells and more)
+- Fast access to external [data sources](https://sales-and-dungeons.app/docs/data-source/) like Open5e (instant access to SRD monsters, spells and more)
 - Import data from other sources:
-    - CSV
-    - [FoundryVTT](https://foundryvtt.com/) Modules
-    - Fight Club 5e XML Format
+  - CSV
+  - [FoundryVTT](https://foundryvtt.com/) Modules
+  - Fight Club 5e XML Format
+  - 5eTools
 - Access Community Templates, Generators & Data Sources from within the App
-- Edit templates in your favorite editor (e.g. Visual Studio Code) and get live preview
+- AI LLM Support (OpenAI, OpenRouter)
+  - Generate entries by prompt using the power of AI
+  - Translate entries by prompt
+  - Execute AI prompts in your templates and generators
+- Cloud sync for templates, generators and data sources
 
 ---
 
