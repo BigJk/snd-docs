@@ -39,3 +39,15 @@ If you get errors like ``Error: printer wasn't able to print: libusb: bad access
 ## Getting strange libusb errors, what to do?
 
 If you get errors like ``handle_events: error: libusb: interrupted [code -10]`` and don't need 'Raw USB Printing' try downloading the ``gui`` instead of ``gui-usb`` version of S&D.
+
+## Mac App: It's not opening because it's from a unverified developer
+
+If your mac is telling you that this app is from a unverified developer you can allow it via the "Privacy & Security" settings. More info: [Open a Mac app from an unidentified developer](https://support.apple.com/lv-lv/guide/mac-help/mh40616/mac)
+
+## Mac App: It's not opening because the app "is damaged"
+
+On M1, M2, etc. it can happen that the app is reported as damaged. Just copy Sales & Dungeons into your Applications folder and execute the following command to allow it to run:
+
+```
+xattr -d com.apple.quarantine "/Applications/Sales & Dungeons.app/"
+```
