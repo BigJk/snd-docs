@@ -13,3 +13,4 @@ Sales & Dungeons supports additional import formats. Currently supported are:
 - **CSV**: Tabular data
 - **Fight Club 5e XML**: Data from the Fight Club 5e xml files
 - **FoundryVTT**: Data from FoundryVTT modules
+- **5e.tools**: JSON data from 5e.tools

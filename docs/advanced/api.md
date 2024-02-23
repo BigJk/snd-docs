@@ -1,99 +1,28 @@
 # API Routes
 
-Sales & Dungeons exposes a few API routes that can be used to fetch data and trigger printing from external applications.
+Although Sales & Dungeons runs as a local application it is split into a backend (handling the database, printing and more) and the UI (handling the visual interface). Backend and frontend communicate via HTTP requests like typical web applications. This has the nice side effect that other applications can also interact with the S&D. Some examples of what you could do:
 
-- If S&D wasn't modified the API is accessible under ``http://127.0.0.1:7123/``.
-- All data is JSON encoded.
+- Remotely create, delete, edit templates, generators and data sources
+- Write a script that imports data sources from different sources than provided in S&D
+- Connect your application to the data from S&D
+- Trigger printing
+- Create your own UI
 
-## ``(GET) /api/extern/templates``
+## Architecture
 
-- Returns a list of all templates stored in S&D
+<center>
+    <img src="/img/snd_arch.png" style={{maxWidth: "700px", width: "100%", padding: '50px 0 50px 0'}} />
+</center>
 
-### Example
+## Protocol
 
-```json
-[
-   {
-      "id":"tmpl:Author+slug",
-      "name":"Cool Template",
-      "author":"Author",
-      "slug":"slug",
-      "description":"..."
-   }
-]
-```
+Communication is done via HTTP POST requests only, because I'm using my own mini-rpc framework which makes it very simple to make go functions available to a frontend. It's called `nra`, and you can find more about it [here](https://github.com/BigJk/nra). In essence:
 
-## ``(GET) /api/extern/generators``
+- All requests are POST
+- The body of the request is a JSON encoded array of arguments (e.g. `["arg1", "arg2", 3, { "hello": "world" }]`)
+- All functions are present under ``http://127.0.0.1:7123/api/FUNCTION_NAME``
+- You can get a basic overview about the available functions via ``http://127.0.0.1:7123/api/functions``
 
-- Returns a list of all generators stored in S&D
+## Examples
 
-### Example
-
-```json
-[
-   {
-      "id":"gen:BigJk+dungeon-generator",
-      "name":"Dungeon Generator",
-      "author":"BigJk",
-      "slug":"dungeon-generator",
-      "description":"This randomly generates a dungeon with some basic description. How you use the door and loot descriptions is up to you. The descriptions are based on the \"AX1: Old School Adventure Accessories - D30 DM Companion\" by Richard J. LeBlanc, Jr.",
-      "config":[
-         {
-            "key":"type",
-            "name":"Algorithm Type",
-            "description":"Which algorithm to use for generation.",
-            "type":"Options",
-            "default":{
-               "choices":[
-                  "Uniform",
-                  "Digger",
-                  "Rogue"
-               ],
-               "selected":"Uniform"
-            }
-         },
-         {
-            "key":"doors",
-            "name":"Add Doors",
-            "description":"Add description of doors and if they are locked.",
-            "type":"Checkbox",
-            "default":true
-         },
-         {
-            "key":"container",
-            "name":"Add Loot Container",
-            "description":"Adds some loot containers.",
-            "type":"Checkbox",
-            "default":true
-         },
-         {
-            "key":"container_chance",
-            "name":"Loot Container Chance",
-            "description":"Percentage (0 - 100%) chance of a loot container present in a room.",
-            "type":"Number",
-            "default":10
-         }
-      ]
-   }
-]
-```
-
-## ``(POST) /api/extern/print/:id``
-
-### Template
-
-- POST body should be a JSON encoded object containing the entry data
-- You can check the info button (top right) on any template to get the id
-- ``:id`` should be the template id (e.g. ``tmpl:Author+slug``)
-
-### Generator
-
-- POST body should be a JSON encoded object containing the generator config
-- You can check the info button on any generator to get the id and the current config as JSON
-- ``:id`` should be the template id (e.g. ``gen:Author+slug``)
-
-## ``(POST) /api/extern/print_raw``
-
-- POST body should contain ESC/POS commands as bytes
-- Commands will be sent to the configured printer
-- This is used by the `Remote S&D Printing` to send prints to different S&D instances
+- [S&D Python SDK](https://github.com/BigJk/snd/blob/master/sdk/python/snd_sdk.py): Example python sdk generated automatically
