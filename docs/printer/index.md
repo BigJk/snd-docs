@@ -13,4 +13,4 @@ In general the rule of thumb is:
 - Most cheap chinese thermal printer found on Amazon or AliExpress support it
 - Most epson thermal printer obviously support it
 - A lot of older Serial printer (like Metapace T-1) also support it
-- More specific information about tested printers can be found in the wiki: Printer-Settings
+- More specific information about tested printers can be found under [Tested Printers](/docs/printer/models)

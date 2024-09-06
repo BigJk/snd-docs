@@ -6,7 +6,7 @@ Sales & Dungeons contain additional filters and extensions for the Nunjucks temp
 
 ### Markdown
 
-Markdown parsing is possible with the ``markdown`` and ``markdowni`` filters. The ``markdowni`` filter will return inline markdown, which means no line-breaks and paragraph margins. Uses [markdown-it](https://github.com/markdown-it/markdown-it) and has markdown table support enabled.
+Markdown parsing is possible with the `markdown` and `markdowni` filters. The `markdowni` filter will return inline markdown, which means no line-breaks and paragraph margins. Uses [markdown-it](https://github.com/markdown-it/markdown-it) and has markdown table support enabled.
 
 ```
 {{ it.some_data | markdown }}
@@ -15,7 +15,7 @@ Markdown parsing is possible with the ``markdown`` and ``markdowni`` filters. Th
 
 ### JSON
 
-The ``json`` filter encodes the data as JSON which can help in debugging problems with a template or passing data to some javascript you want to execute.
+The `json` filter encodes the data as JSON which can help in debugging problems with a template or passing data to some javascript you want to execute.
 
 ```
 {{ it.some_data | json }}
@@ -23,7 +23,7 @@ The ``json`` filter encodes the data as JSON which can help in debugging problem
 
 ### Source
 
-Fetch sources by id from inside your template with the ``source`` filter. This is useful in generators to fetch a source that was selected by the user.
+Fetch sources by id from inside your template with the `source` filter. This is useful in generators to fetch a source that was selected by the user.
 
 ```
 {{ config.data_source.selected | source }}
@@ -34,11 +34,31 @@ Fetch sources by id from inside your template with the ``source`` filter. This i
 {% endfor %}
 ```
 
+#### Using linked sources in generator
+
+If you want to use a linked source in a generator, you can use the `sources` variable.
+
+```
+{% for sourceName in sources %}
+  {% for item in sourceName | source %}
+    ...
+  {% endfor %}
+{% endfor %}
+```
+
+#### Getting source content into Javascript
+
+You can also get the source content into a javascript variable with the help of the `json` filter.
+
+```js
+const sources = JSON.parse({{ sources | json }});
+```
+
 ## Extensions
 
 ### JSON Data
 
-You can add JSON data as new Nunjucks variables. This might be useful if JSON wants to be embedded as some kind of static data for the template. The variable the data will be saved to can be specified (``some_var`` in the example).
+You can add JSON data as new Nunjucks variables. This might be useful if JSON wants to be embedded as some kind of static data for the template. The variable the data will be saved to can be specified (`some_var` in the example).
 
 ```
 {% data "some_var" %}
@@ -54,7 +74,7 @@ You can add JSON data as new Nunjucks variables. This might be useful if JSON wa
 
 ### Javascript Execution
 
-If you want to execute some javascript on the data within Nunjucks instead of dynamically in the HTML (``<script>...</script>``) you can use the ``js`` extension. The extension expects a valid javascript function that takes 1 argument. The argument is a variable containing all the nunjucks variables. The function should return a value. That value will be saved to the nunjucks variable specified (``some_var`` in the example).
+If you want to execute some javascript on the data within Nunjucks instead of dynamically in the HTML (`<script>...</script>`) you can use the `js` extension. The extension expects a valid javascript function that takes 1 argument. The argument is a variable containing all the nunjucks variables. The function should return a value. That value will be saved to the nunjucks variable specified (`some_var` in the example).
 
 ```
 {% js "some_var" %}

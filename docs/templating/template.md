@@ -12,6 +12,10 @@ Using HTML and CSS makes it possible to use all the nice and convenient layout a
 options that they have to offer and even include any common framework you might need
 (e.g. Fontawesome for Icons). This can greatly speedup the template creation process.
 
+## Video guide
+
+<iframe width="100%" style={{"aspect-ratio": "16 / 9"}} src="https://www.youtube.com/embed/3ny4qo40DQU?si=c9_eOfCpDzG19a45" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Learning
 
 If you are new to HTML, CSS and the likes a good starting point might be:
@@ -31,11 +35,11 @@ the template list are set.
 ### Author & Slug
 
 It's important to know that templates will be identified by author and slug. Both are allowed
-to contain alphanumeric (``a-z A-Z 0-9``) and the ``-`` character. You can think about the slug as a simplified
+to contain alphanumeric (`a-z A-Z 0-9`) and the `-` character. You can think about the slug as a simplified
 name that is used for identification instead of looking nice to display.
 
-**Example:** If you want a template containing Magic Items you might set the name to ``Magic Items``,
-the Author to ``YourUsername`` and the slug to ``magic-items``.
+**Example:** If you want a template containing Magic Items you might set the name to `Magic Items`,
+the Author to `YourUsername` and the slug to `magic-items`.
 
 With the help of author and slug it is easier to share templates and update them when importing.
 
@@ -43,12 +47,12 @@ With the help of author and slug it is easier to share templates and update them
 
 It is possible to attach images to a template. Imagine you want to add a border to your template.
 Here is the right place to add these images. If you added an image it is possible to access it
-in a template via the ``images`` variable.
+in a template via the `images` variable.
 
 ### Example
 
 ```html
-<img src="{{ images['your_image.png'] }}" alt="">
+<img src="{{ images['your_image.png'] }}" alt="" />
 ```
 
 ## Sources
@@ -65,7 +69,7 @@ property a different input will be shown in the entry creation and editing.
 
 ### — Type: Text
 
-If a property is a text like the ``description`` in the following example a normal text input
+If a property is a text like the `description` in the following example a normal text input
 will be shown.
 
 ```json
@@ -76,7 +80,7 @@ will be shown.
 
 ### — Type: Number
 
-If a property is a number like the ``hp`` in the following example a number input will be shown.
+If a property is a number like the `hp` in the following example a number input will be shown.
 
 ```json
 {
@@ -86,8 +90,8 @@ If a property is a number like the ``hp`` in the following example a number inpu
 
 ### — Type: List
 
-If a property is a list (array) like the ``attacks`` in the following example it will be possible
-to create and remove list items with editable ``name`` and ``damage`` values.
+If a property is a list (array) like the `attacks` in the following example it will be possible
+to create and remove list items with editable `name` and `damage` values.
 
 ```json
 {
@@ -104,13 +108,13 @@ List of basic types will also work.
 
 ```json
 {
-  "attacks": [ "Bite", "Slash" ]
+  "attacks": ["Bite", "Slash"]
 }
 ```
 
 ### — Type: Image
 
-If any text property contains the text ``!IMAGE`` like the ``icon`` property in the following
+If any text property contains the text `!IMAGE` like the `icon` property in the following
 example a image input will be shown.
 
 ```json
@@ -122,7 +126,7 @@ example a image input will be shown.
 To use it as an image in your template:
 
 ```html
-<img src="{{ it.icon }}" alt="">
+<img src="{{ it.icon }}" alt="" />
 ```
 
 ### Full Example
@@ -136,9 +140,7 @@ A skeleton for a weapon could be the following:
   "damage_dice": "1d8",
   "damage_type": "slashing",
   "name": "Battleaxe",
-  "properties": [
-    "versatile (1d10)"
-  ],
+  "properties": ["versatile (1d10)"],
   "weight": "4 lb."
 }
 ```
@@ -163,8 +165,8 @@ See [Nunjucks Filter & Extension](https://github.com/BigJk/snd/wiki/Nunjucks-Fil
 
 In the template editors following hotkeys are available:
 
-- ``Ctrl+Space``: Open Hint
-- ``Ctrl+G``: Open Snippets
+- `Ctrl+Space`: Open Hint
+- `Ctrl+G`: Open Snippets
 
 ## Variables
 
@@ -188,15 +190,15 @@ To access the name property in the nunjucks html template you just need to write
 
 ### Printer Settings
 
-The printer settings you set are also available in the template under the ``settings`` variable.
-Using the ``settings.printerWidth`` setting is especially useful to change your design depending
+The printer settings you set are also available in the template under the `settings` variable.
+Using the `settings.printerWidth` setting is especially useful to change your design depending
 on the size of the printer. Most printer will either have a 58mm or 80mm print area, so it's wise
 to adopt your template to both sizes.
 
 ### Images
 
-Any image that you saved inside your template will be available under the ``images`` variable.
+Any image that you saved inside your template will be available under the `images` variable.
 
 ```html
-<img src="{{ images['your_image.png'] }}" alt="">
+<img src="{{ images['your_image.png'] }}" alt="" />
 ```
