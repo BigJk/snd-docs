@@ -11,11 +11,11 @@ Here basic information for the generator, like a name and description that will 
 ### Author & Slug
 
 It's important to know that generators will be identified by author and slug. Both are allowed
-to contain alphanumeric (``a-z A-Z 0-9``) and the ``-`` character. You can think about the slug as a simplified
+to contain alphanumeric (`a-z A-Z 0-9`) and the `-` character. You can think about the slug as a simplified
 name that is used for identification instead of looking nice to display.
 
-**Example:** If you want a generator generating Dungeons you might set the name to ``Dungeon Generator``,
-the Author to ``YourUsername`` and the slug to ``dungeon-generator``.
+**Example:** If you want a generator generating Dungeons you might set the name to `Dungeon Generator`,
+the Author to `YourUsername` and the slug to `dungeon-generator`.
 
 With the help of author and slug it is easier to share generators and update them when importing.
 
@@ -27,12 +27,12 @@ Check Source section below.
 
 It is possible to attach images to a generator. Imagine you want to add a border to your template.
 Here is the right place to add these images. If you added an image it is possible to access it
-in a template via the ``images`` variable.
+in a template via the `images` variable.
 
 ### Example
 
 ```html
-<img src="{{ images['your_image.png'] }}" alt="">
+<img src="{{ images['your_image.png'] }}" alt="" />
 ```
 
 ## Sources
@@ -43,13 +43,13 @@ to this generator can be selected here.
 
 ## Pass Entries to Javascript
 
-If you enabled this option in the Information tab the entries of all the data sources will be available as a javascript array called ``entries`` inside of the Print Template.
+If you enabled this option in the Information tab the entries of all the data sources will be available as a javascript array called `entries` inside of the Print Template.
 
 ## Config
 
 The config of a generator defines what kind of values a user can tweak. These are the values your generator template should respond to and are available in your template.
 
-- **Key**: Specifies the key for the value. This affects how you access the value in the template. ``key_test`` can be accessed in template by ``{{ config.key_test }}``
+- **Key**: Specifies the key for the value. This affects how you access the value in the template. `key_test` can be accessed in template by `{{ config.key_test }}`
 - **Name & Description**: What the user will be shown as name and description for this config option.
 - **Type**: What kind of input will be shown for the user.
 - **Default Value**: The default value for this config
@@ -72,14 +72,24 @@ See [Nunjucks Filter & Extension](https://github.com/BigJk/snd/wiki/Nunjucks-Fil
 
 #### Seed
 
-As mentioned before all generators should use the user provided seed in their generation logic. You can access the seed with ``{{ config.seed }}``. There are two functions that are pre-seeded with the ``config.seed`` value. If you use them the template will be seeded correctly without any additional changes:
+As mentioned before all generators should use the user provided seed in their generation logic. You can access the seed with `{{ config.seed }}`.
+There are two javascript functions that are pre-seeded with the `config.seed` value. If you use them the template will be seeded correctly without any additional changes:
 
-#### ``random()``
+#### `random()`
 
-Replacement for ``Math.random()``
+Replacement for `Math.random()`
 
 #### RPG Dice Roller
 
-[RPG Dice Roller](https://dice-roller.github.io/documentation/) is embedded in any generator template. You can access it via the global variable ``rpgDiceRoller``.
+[RPG Dice Roller](https://dice-roller.github.io/documentation/) is embedded in any generator template. You can access it via the global variable `rpgDiceRoller`.
 
-If you just want to quickly roll a dice and get the numeric output use: ``dice.roll('1d6+2').total``
+If you just want to quickly roll a dice and get the numeric output use: `dice.roll('1d6+2').total`
+
+#### Nunjucks
+
+The following Nunjucks filters are also seeded and should result in predictable output when using the same seed:
+
+```
+Shuffled: {{ [1, 2, 3, 4, 5] | shuffle }}
+Pick one by random: {{ [1, 2, 3, 4, 5] | random }}
+```
