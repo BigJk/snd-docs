@@ -161,13 +161,6 @@ be shown under each entry in the template entry list.
 
 See [Nunjucks Filter & Extension](https://github.com/BigJk/snd/wiki/Nunjucks-Filter-&-Extensions) for more info on additional filters and extensions available in Sales & Dungeons.
 
-## Hotkeys
-
-In the template editors following hotkeys are available:
-
-- `Ctrl+Space`: Open Hint
-- `Ctrl+G`: Open Snippets
-
 ## Variables
 
 You will be able to access the data of the data skeleton or the selected entry in the template.
