@@ -42,11 +42,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/BigJk/snd-docs/",
+          editUrl: "https://github.com/BigJk/snd-docs/blob/main/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/BigJk/snd-docs/",
+          editUrl: "https://github.com/BigJk/snd-docs/blob/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
