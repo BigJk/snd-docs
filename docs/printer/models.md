@@ -64,7 +64,7 @@ A cheap **DE-9 RS232-to-USB**, **DB-25 to DE-9 Adapter** and **DE-9 Null-Modem**
 - **Printer Type:** Serial
 - **Printer Type:**
   - **Windows Direct Printing:** Select Printer Name ([Setup](/docs/printer/setup/windows-generic/))
-  - **Serial:** Follow `Serial Windows` notes below
+  - **Serial:** Follow `Metapace T-1` notes above
 - **Explicit Initialization:** On
 - **Force Standard Mode:** On
 
@@ -147,3 +147,21 @@ A cheap **DE-9 RS232-to-USB**, **DB-25 to DE-9 Adapter** and **DE-9 Null-Modem**
 - **Explicit Initialization:** Unknown
 - **Force Standard Mode:** Unknown
 - **Cut After Printing:** On / Off
+
+## [sam4s GCUBE-102D](http://www.sam4s.co.kr/eng/asp/products_detail.asp?seq=109)
+
+<img src="/img/article/sam4scube.jpg" width="220" />
+
+- **Printer Width:** 576
+- **Printer Type:**
+  - **Raw USB Printing:** Endpoint=`1c8a:3a39:01`
+  - **Windows Direct Printing:** Select Printer Name ([Setup](/docs/printer/setup/windows-generic/)) (untested but should work)
+  - **CUPS:** Select Printer Name ([Setup](/docs/printer/setup/cups/)) (untested but should work)
+  - **Serial:** Worked with USB Serial Adapter + Null-Modem
+- **Explicit Initialization:** Off (or On when Raw USB Printing is used)
+- **Force Standard Mode:** On
+- **Cut After Printing:** On / Off
+
+### Notes
+
+There is a android [NFC app](https://play.google.com/store/apps/details?id=com.sam4s.gcubenfc&hl=en_US) that can be used to configure the printer. This is needed to set the printer to ESC/POS mode and 203 DPI.
