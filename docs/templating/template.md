@@ -179,6 +179,16 @@ To access the name property in the nunjucks html template you just need to write
 <span>Name: {{ it.name }}</span>
 ```
 
+## Config
+
+The config of a template defines what kind of values a user can globally tweak. A lot of templates won't need these. Sometimes it can be useful to allow the user to override some values in the template.
+or change between different styles.
+
+- **Key**: Specifies the key for the value. This affects how you access the value in the template. `key_test` can be accessed in template by `{{ config.key_test }}`
+- **Name & Description**: What the user will be shown as name and description for this config option.
+- **Type**: What kind of input will be shown for the user.
+- **Default Value**: The default value for this config
+
 ## Additional Variables
 
 ### Printer Settings

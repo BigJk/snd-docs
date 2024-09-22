@@ -76,6 +76,11 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "https://ko-fi.com/bigjk",
+            label: "Support the Project",
+            position: "right",
+          },
         ],
       },
       footer: {
@@ -85,8 +90,16 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Documentation",
-                to: "/docs/intro",
+                label: "Getting Started",
+                to: "/docs/intro/",
+              },
+              {
+                label: "Tested Printer",
+                to: "/docs/printer/models/",
+              },
+              {
+                label: "Buyers Guide",
+                to: "/docs/printer/",
               },
             ],
           },
@@ -109,6 +122,15 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/BigJk/snd",
+              },
+            ],
+          },
+          {
+            title: "Other Stuff",
+            items: [
+              {
+                label: "Support the Project",
+                href: "https://ko-fi.com/bigjk",
               },
             ],
           },

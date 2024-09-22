@@ -80,4 +80,24 @@ to the "draw image" command of the printer.
 
 ## Getting Started
 
-To get started with Sales & Dungeons please read the [Getting Started](/docs/intro).
+To get started with Sales & Dungeons please read the [Getting Started](/docs/intro/).
+
+---
+
+## Thanks to JetBrains
+
+This Project is supported with a JetBrains License through the [Open Source Support Program](https://www.jetbrains.com/community/opensource).
+
+<img width={"230"} src="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png" alt="JetBrains Logo (Main) logo." />
+
+---
+
+## Found the project useful?
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A763FPT)
+
+---
+
+## Credits
+
+Icons used in the Sales & Dungeons Logo were made by [Smashicons](https://www.flaticon.com/authors/smashicons), [Good Ware](https://www.flaticon.com/authors/good-ware) from [www.flaticon.com](http://www.flaticon.com)

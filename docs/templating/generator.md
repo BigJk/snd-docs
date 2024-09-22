@@ -19,10 +19,6 @@ the Author to `YourUsername` and the slug to `dungeon-generator`.
 
 With the help of author and slug it is easier to share generators and update them when importing.
 
-### Pass Entries to Javascript
-
-Check Source section below.
-
 ## Images
 
 It is possible to attach images to a generator. Imagine you want to add a border to your template.
@@ -41,9 +37,8 @@ Data sources are collection of entries (data) that can be linked to generators.
 An example would be a list of Monsters or Magic Items. Any data source that you want to link
 to this generator can be selected here.
 
-## Pass Entries to Javascript
-
-If you enabled this option in the Information tab the entries of all the data sources will be available as a javascript array called `entries` inside of the Print Template.
+The sources are available in the template via the `sources` variable. It's important to know that this is a list of the source ids.
+If you want to fetch the data of a source you can use the `source` filter. Check the **Tips & Tricks** section below for more information.
 
 ## Config
 
@@ -93,3 +88,42 @@ The following Nunjucks filters are also seeded and should result in predictable 
 Shuffled: {{ [1, 2, 3, 4, 5] | shuffle }}
 Pick one by random: {{ [1, 2, 3, 4, 5] | random }}
 ```
+
+## 🛠️ Tips & Tricks
+
+### Accessing a linked Data Source
+
+**Randomly select an entry from each linked Data Source**
+
+```
+{% for s in sources %}
+  {% set selected = s | source | random %}
+  {{ selected.id }} {{ selected.data.whatever }}
+{% endfor %}
+```
+
+**If you only have one linked Data Source**
+
+```
+{% set selected = sources[0] | source | random %}
+{{ selected.id }} {{ selected.data.whatever }}
+```
+
+**If you linked it via a config option**
+
+```
+{% set selected = config.my_source | source | random %}
+{{ selected.id }} {{ selected.data.whatever }}
+```
+
+### Passing the config to javascript
+
+```html
+<script>
+  const config = JSON.parse(`{{ config | json }}`);
+</script>
+```
+
+### Nunjucks Filter & Extensions
+
+Checkout [Nunjucks Filter & Extensions](/docs/templating/nunjucks-filter/) for more info on additional filters and extensions available in Sales & Dungeons.

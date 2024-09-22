@@ -54,9 +54,9 @@ This doesn't mean that it's not usable and it might not be a problem with all ha
 #### Comparison of horizontal lines
 
 <div style={{display: 'flex', justifyItems:'center', alignItems:'center', justifyContent:'center'}}>
-  <img src="https://cdn.discordapp.com/attachments/681574188875907194/688118559922061324/20200313_151703.jpg?ex=66ebde19&is=66ea8c99&hm=f62bfe35b90e2d25f9e7122cad6c55a4a089e45134cc27f8295a44be022bec1e&" width="250" />
+  <img src="/img/article/handheld_horizontal.jpg" width="250" />
   <div style={{margin: '50px'}}>handheld 58mm vs generic 80mm</div>
-  <img src="https://cdn.discordapp.com/attachments/681574188875907194/688119507767787565/IMG_20200313_212045.jpg?ex=66ebdefb&is=66ea8d7b&hm=107fa52c89201b257e8f21f54536c4b0e652d9e61b85e07419e50c7371ceb1c1&" width="200" />
+  <img src="/img/article/80mm_horizontal.jpg" width="200" />
 </div>
 
 ### ⚠️ Word of caution: "Lifestyle printer"
@@ -70,7 +70,7 @@ There are a lot of these "lifestyle" printers on the market. They are usually ve
 
 There are label printer that support ESC/POS but so far nobody got them to work with Sales & Dungeons. As I don't have access to one of these printers I can't say if they can work or not.
 
-### Second hand
+### Good Deal: Second hand
 
 If you are on a budget you can also look for second hand printers. A lot of older printers or even newer ones and can be found for cheap. I bought a lot of my printers on ebay for a fraction of the price of a new one.
 Just watch out for very old serial printers. They work but the print speed can be very slow. If they are dirt cheap it might still be worth the try.
