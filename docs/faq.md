@@ -6,7 +6,8 @@ sidebar_position: 4
 
 ## My printer isn't printing the full paper width, what to do?
 
-The default printing width in S&D is set for 58mm printers. Just go to the settings and increase the printer width. See [Tested Printer](./printer/models) for common values. Rule of thumb is:
+The default printing width in S&D is set for 58mm printers. Just go to the settings and increase the printer width. See [Tested Printer](/docs/printer/models) for common values. Rule of thumb is:
+
 - 58mm: 384
 - 80mm: 504 - 576
 
@@ -30,15 +31,15 @@ This is a false positive triggered by a library that S&D uses. In newer versions
 
 ## I'm getting 'RAW USB Printing' errors, what to do?
 
-If you get errors like ``Error: printer wasn't able to print: libusb: bad access [code -3]`` or ``Error: printer wasn't able to print: not supported [code -12]`` this can be related to other drivers interfering or S&D not having enough privilege's. You can try:
+If you get errors like `Error: printer wasn't able to print: libusb: bad access [code -3]` or `Error: printer wasn't able to print: not supported [code -12]` this can be related to other drivers interfering or S&D not having enough privilege's. You can try:
 
-- Running S&D as Admin (Windows) or ``sudo`` (Mac, Linux)
+- Running S&D as Admin (Windows) or `sudo` (Mac, Linux)
 - Switching the USB port and re-selecting it on the Device page
 - Try using Direct Printing (Windows) or CUPS (Mac, Linux)
 
 ## Getting strange libusb errors, what to do?
 
-If you get errors like ``handle_events: error: libusb: interrupted [code -10]`` and don't need 'Raw USB Printing' try downloading the ``gui`` instead of ``gui-usb`` version of S&D.
+If you get errors like `handle_events: error: libusb: interrupted [code -10]` and don't need 'Raw USB Printing' try downloading the `gui` instead of `gui-usb` version of S&D.
 
 ## Mac App: It's not opening because it's from a unverified developer
 
