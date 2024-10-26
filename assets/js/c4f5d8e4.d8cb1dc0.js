@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksnd_docs_ds=self.webpackChunksnd_docs_ds||[]).push([[195],{2841:(n,o,s)=>{s.r(o),s.d(o,{default:()=>d});var t=s(7294);const d=function(){return t.useEffect((()=>{"127.0.0.1"===window.location.hostname||"localhost"===window.location.hostname?window.location.href="/docs/intro/":window.location.href="https://sales-and-dungeons.app"}),[]),null}}}]);
