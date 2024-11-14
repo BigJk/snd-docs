@@ -35,6 +35,15 @@ const config = {
 
   plugins: [require.resolve("docusaurus-lunr-search")],
 
+  scripts: [
+    {
+      src: "https://cloud.umami.is/script.js",
+      "data-website-id": "a137e588-c3ce-4b63-91d8-9b609fc284cf",
+      async: false,
+      defer: true,
+    },
+  ],
+
   presets: [
     [
       "classic",
