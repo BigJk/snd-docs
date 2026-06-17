@@ -15,3 +15,7 @@ For Windows, it is recommended to start by trying the [Generic Windows Driver](.
 ## Linux & Mac
 
 For Linux & Mac, it is recommended to start by trying the [CUPS](./cups) setup. If this doesn't work you can either try using manufacturer supplied drivers or [LibUSB](./libusb).
+
+## Android
+
+For Android, use [Android Printing](./android). The Android app can print directly to ESC/POS printers through USB or paired Bluetooth Classic SPP printers.
